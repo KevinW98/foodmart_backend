@@ -1,0 +1,27 @@
+[{
+  "name": "prepared food",
+  "background_link": "https://images.pexels.com/photos/2433979/pexels-photo-2433979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+  "_id":"5f73af25ff34707db43ab7b7"
+},
+  {
+    "name": "diary",
+    "background_link":"https://images.pexels.com/photos/3252137/pexels-photo-3252137.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    "_id": "5f73af25ff34707db43ab7b8"
+  },
+  {
+    "name": "breads",
+     "background_link": "https://images.pexels.com/photos/3993720/pexels-photo-3993720.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    "_id": "5f73af25ff34707db43ab7b9"
+  },
+  {
+    "name": "snacks",
+    "background_link": "https://images.pexels.com/photos/1582482/pexels-photo-1582482.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    "_id":"5f73af25ff34707db43ab7ba"
+  },
+  {
+    "name": "beverages",
+    "background_link": "https://images.pexels.com/photos/3008/drinks-supermarket-cans-beverage.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    "_id": "5f73af25ff34707db43ab7bb"
+  }
+
+]

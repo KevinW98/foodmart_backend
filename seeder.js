@@ -1,0 +1,55 @@
+const fs = require('fs');
+const mongoose = require('mongoose');
+const colors = require('colors');
+const dotenv = require('dotenv');
+
+//Load environment variables
+dotenv.config({path:'./config/config.env'});
+
+//Load models
+const Category = require('./models/Category');
+const Item = require('./models/Item')
+
+//Connect to database
+mongoose.connect(process.env.MONGO_URI,{
+    useNewUrlParser:true,
+    useCreateIndex:true,
+    useFindAndModify:false,
+    useUnifiedTopology: true
+});
+
+//Read JSON Files
+const categories = JSON.parse(
+    fs.readFileSync(`${__dirname}/_data/categories.json`,'utf-8'));
+
+const items = JSON.parse(
+    fs.readFileSync(`${__dirname}/_data/items.json`,'utf-8'));
+
+//Import Into Database
+const importData = async ()=>{
+    try{
+        await Category.create(categories);
+        await Item.create(items);
+        console.log('Data Imported...'.green.inverse);
+        process.exit();
+    }catch (err) {
+        console.error(err);
+    }
+}
+
+//Delete data from database
+const removeData = async ()=>{
+    try{
+    await Category.deleteMany();
+    await Item.deleteMany();
+    console.log('Data removed...'.red.inverse);
+    process.exit();
+}catch (err) {
+       console.error(err);
+    }}
+
+if(process.argv[2]==='-i'){
+    importData();
+}else if(process.argv[2] === '-d'){
+    removeData();
+}
