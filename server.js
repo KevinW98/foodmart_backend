@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const connectDB = require('./config/database');
 const colors = require('colors')
 const errorHandler = require('./middleware/error');
+const cookieParser = require('cookie-parser');
+
 
 //Load environment variables
 dotenv.config({path:'./config/config.env'});
@@ -16,12 +18,20 @@ connectDB();
 //Route files
 const categories = require('./routes/categories');
 const items = require('./routes/items');
+const auth = require('./routes/auth');
+const users = require('./routes/users');
+
 
 
 const app = express();
 
 //Body Parser
 app.use(express.json());
+
+//Cookie parser
+app.use(cookieParser());
+
+
 
 
 
@@ -35,6 +45,8 @@ if(process.env.NODE_ENV === 'development'){
 
 app.use('/api/v1/categories',categories);
 app.use('/api/v1/items',items);
+app.use('/api/v1/auth',auth);
+app.use('/api/v1/users',users);
 
 app.use(errorHandler);
 
