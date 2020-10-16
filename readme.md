@@ -1,7 +1,6 @@
 #Foodmart API
 
-Postman API [document][1]
-[1]:https://documenter.getpostman.com/view/10712880/TVRq36Yk "document"
+[API Document](https://documenter.getpostman.com/view/10712880/TVRq36Yk)
 
 >Backend API for food-mart application, which is an e-commerce web application
 
