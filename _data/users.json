@@ -2,22 +2,26 @@
   {
     "name": "Ken Wang",
     "email": "kenwang@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "_id": "5f81cd2c5b21f1bd89b0005d"
   },
   {
     "name": "Lisa Li",
     "email": "Lisali@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "_id": "5f81cd2c5b21f1bd89b0005e"
   },
   {
     "name": "Kevin Wei",
     "role": "admin",
     "email": "kevinwork1998@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "_id": "5f81cd2c5b21f1bd89b0005f"
   },
   {
     "name":"Nate Tong",
     "email":"nateTong@gmail.com",
-    "password":"123456"
+    "password":"123456",
+    "_id": "5f81cd2c5b21f1bd89b00060"
   }
 ]
