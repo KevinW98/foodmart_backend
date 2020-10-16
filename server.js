@@ -10,6 +10,8 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const hpp = require('hpp');
 const cors = require('cors');
+const xss = require('xss-clean');
+const path = require('path');
 
 //Load environment variables
 dotenv.config({path:'./config/config.env'});
@@ -51,6 +53,9 @@ if(process.env.NODE_ENV === 'development'){
 // Set security headers
 app.use(helmet());
 
+// Prevent XSS attacks
+app.use(xss());
+
 
 //Rate limiting
 const limiter = rateLimit({
@@ -65,6 +70,9 @@ app.use(hpp());
 
 // Enable CORS
 app.use(cors());
+
+// Set static folder
+app.use(express.static(path.join(__dirname,'public')));
 
 
 //Mount routers
